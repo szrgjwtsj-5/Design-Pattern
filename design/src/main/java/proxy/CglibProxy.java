@@ -21,6 +21,7 @@ public class CglibProxy implements MethodInterceptor {
         this.target = target;
     }
 
+    @Override
     public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
         System.out.println("###    before method invocation");
         Object res = method.invoke(target, objects);
